@@ -5,9 +5,14 @@ import {createMemoryHistory} from 'history'
 import { Router } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
+const renderFn = (reponseData)=>{
+  render(<ImageList images={reponseData} />);
+}
+
 describe('count total images', () => {
     it('count total images by passing images array', () => {
-        render(<ImageList images={mockResp.results} />);
+        //render(<ImageList images={mockResp.results} />);
+        renderFn(mockResp.results)
         const imgMapElements = screen.getAllByTestId(/img-list-/i)
         expect(imgMapElements.length).toBe(2);
     });
