@@ -12,9 +12,10 @@ const SearchBar = (props) => {
         <div className="ui segment">
             <form className="ui form" onSubmit={onSumbitForm}>
                 <div className="field">
-                    <label> Image Search </label>
+                    <h4> Image Search </h4>
 
-                    <input type="text"
+                    <input
+                        type="text"
                         value={term}
                         onChange={e => setTerm(e.target.value)}
                         placeholder="Search images here"></input>
