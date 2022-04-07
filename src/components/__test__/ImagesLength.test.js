@@ -11,7 +11,7 @@ describe('check images count', () => {
         expect(checkImageCount.textContent).toBe('Found 2 Images')
     });
 
-    it('negative test', () => {
+    it('check if wrong image count text is not showing it up on sceeen', () => {
         const checkImageCount = screen.getByTestId(/img-count/i)
         expect(checkImageCount.textContent).not.toBe('Found 10 Images')
     });
