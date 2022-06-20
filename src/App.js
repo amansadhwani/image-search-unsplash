@@ -19,7 +19,6 @@ const App = () =>{
               Authorization: 'Client-ID a6c2b3fd810b07786243171b14aa03548602785ce1bd3eed8c0b41d9f30938b0'
           }
       })
-      console.log(response.data.results)
      setImages(response.data.results)
   }
 
